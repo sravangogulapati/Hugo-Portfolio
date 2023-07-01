@@ -1,4 +1,5 @@
-{{ partial "header.html" }}
+{{ $currentPage := .Title }}
+{{ partial "header.html" (dict "currentPage" $currentPage)}}
 <h2>{{ .Title }}</h2>
 <p>
     {{ .Content }}

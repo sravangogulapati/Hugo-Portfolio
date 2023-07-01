@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Art on My New Hugo Site</title>
+    <link>https://hugo-portfolio-79m.pages.dev/art/</link>
+    <description>Recent content in Art on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jun 2023 16:50:35 -0700</lastBuildDate><atom:link href="https://hugo-portfolio-79m.pages.dev/art/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Art1</title>
+      <link>https://hugo-portfolio-79m.pages.dev/art/art1/</link>
+      <pubDate>Fri, 30 Jun 2023 16:50:35 -0700</pubDate>
+      
+      <guid>https://hugo-portfolio-79m.pages.dev/art/art1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

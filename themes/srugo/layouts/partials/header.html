@@ -1,2 +1,25 @@
-<a href="{{ site.BaseURL }}">Sravan's Portfolio</a>
-<p>This is the header</p>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" /> 
+</head>
+
+{{ $currentPage := .currentPage }}
+<div class="header">
+    <a href="{{ site.BaseURL }}" class="logo">SP</a>
+    <div class="header-right">
+        {{ if eq $currentPage "Home" }}
+            <a href="{{ site.BaseURL }}" class="active">Home</a>
+        {{ else }}
+            <a href="{{ site.BaseURL }}">Home</a>
+        {{ end }}
+        {{ range site.AllPages }}
+            {{ if (or (and (.IsPage) ( .Params.display_in_header )) ( .IsSection ) ) }}
+                {{ if eq .Title $currentPage }}
+                    <a href="{{ .Permalink }}" class="active">{{ .Title }}</a>
+                {{ else }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
