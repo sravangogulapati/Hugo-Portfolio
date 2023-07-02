@@ -1,10 +1,23 @@
 {{ $currentPage := .Title }}
 {{ partial "header.html" (dict "currentPage" $currentPage)}}
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/list_page_styles.css" /> 
+</head>
+
 <h2>{{ .Title }}</h2>
 <ul>
     {{ range .Pages }}
-        <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
+        <div class="project-list-div">
+            <div class="image-container">
+                <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-image">
+            </div>
+            <div class="description-container">
+                <a href="{{ .Permalink }}" class="project-title">{{ .Title }}</a>
+                <p class="project-tagline">{{ .Params.tagline }}</p>
+            </div>
+        </div>
+        
     {{ end }}
 </ul>

@@ -17,6 +17,7 @@
 }
 
 .header a.logo {
+  padding: 12px 0px;
   font-size: 25px;
   font-weight: bold;
 }
