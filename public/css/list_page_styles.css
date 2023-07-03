@@ -3,3 +3,39 @@
  - put description div to the right of the image and tagline under the title
  - button to source code to the right of everything.
  */
+
+ .project-list-div {
+    display: flex;
+    flex-direction: row;
+    background-color: pink;
+    border-style: solid;
+    margin-bottom: 10px;
+ }
+
+ .image-container img {
+    max-width: 200px;
+    padding: 10px;
+ }
+
+ .description-container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+ }
+
+ .project-title {
+    /* background-color: blue; */
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin: 0px;
+ }
+
+ .project-tagline {
+    padding: 10px;
+    margin: 0px;
+ }
+
+ .read-more {
+    padding-left: 10px;
+ }
