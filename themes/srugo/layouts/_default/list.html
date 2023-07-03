@@ -7,9 +7,9 @@
 </head>
 
 <h2>{{ .Title }}</h2>
-<ul>
+<div class="project-list-container">
     {{ range .Pages }}
-        <div class="project-list-div">
+        <div class="project-item-div">
             <div class="image-container">
                 <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-image">
             </div>
@@ -21,4 +21,4 @@
         </div>
         
     {{ end }}
-</ul>
+    </div>
