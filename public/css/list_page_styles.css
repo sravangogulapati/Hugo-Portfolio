@@ -3,6 +3,11 @@
  - put description div to the right of the image and tagline under the title
  - button to source code to the right of everything.
  */
+
+ .project-item-card {
+    text-decoration: none;
+ }
+
  .project-list-container {
     max-width: 50%;
     margin: auto;
@@ -11,9 +16,13 @@
  .project-item-div {
     display: flex;
     flex-direction: row;
-    background-color: pink;
     border-style: solid;
+    border-radius: 10px;
     margin-bottom: 10px;
+ }
+
+ .project-item-div:hover {
+    background-color: hsl(287, 100%, 96%);
  }
 
  .image-container img {
