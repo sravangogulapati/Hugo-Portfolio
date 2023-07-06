@@ -1,7 +1,7 @@
 {{ $currentPage := .Title }}
 {{ partial "header.html" (dict "currentPage" $currentPage)}}
 
-<a href='{{ printf "%s%s" site.BaseURL .Section }}'>Back to {{ .Section }}</a>
+<a href='{{ printf "%s%s" site.BaseURL .Section }}'><- {{ .Section }}</a>
 <h2>{{ .Title }}</h2>
 <p>
     {{ .Content }}

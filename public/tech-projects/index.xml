@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech Projects on My New Hugo Site</title>
+    <link>https://imsravan.com/tech-projects/</link>
+    <description>Recent content in Tech Projects on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jun 2023 16:28:28 -0700</lastBuildDate><atom:link href="https://imsravan.com/tech-projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project2</title>
+      <link>https://imsravan.com/tech-projects/project2/</link>
+      <pubDate>Fri, 30 Jun 2023 16:28:28 -0700</pubDate>
+      
+      <guid>https://imsravan.com/tech-projects/project2/</guid>
+      <description>This is project 2.</description>
+    </item>
+    
+    <item>
+      <title>Project1</title>
+      <link>https://imsravan.com/tech-projects/project1/</link>
+      <pubDate>Wed, 28 Jun 2023 23:43:43 -0700</pubDate>
+      
+      <guid>https://imsravan.com/tech-projects/project1/</guid>
+      <description>This is my first project.</description>
+    </item>
+    
+  </channel>
+</rss>
