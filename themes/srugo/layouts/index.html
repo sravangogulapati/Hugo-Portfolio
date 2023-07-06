@@ -1,4 +1,20 @@
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/index_styles.css" /> 
+</head>
+
 {{ $currentPage := .Title }}
 {{ partial "header.html" (dict "currentPage" $currentPage)}}
-<h1>{{ .Title }}</h1>
-<p>{{ .Content }}</p>
+
+<div class="index-content">
+    <p>{{ .Content }}</p>
+    <div>
+        {{ range site.Sections }}
+            <h3>Some {{ .Title }}:</h3>
+            {{ range .Pages }}
+                <a href="{{ .Permalink }}">{{ .Title }}</p>
+            {{ end }}
+            <a href="{{ .Permalink }}">See more...</a>
+        {{ end }}
+    </div>
+</div>

@@ -1,54 +1,75 @@
 /* TODO: 
- - limit image certain size 
- - put description div to the right of the image and tagline under the title
- - button to source code to the right of everything.
- */
+- limit image certain size 
+- put description div to the right of the image and tagline under the title
+- button to source code to the right of everything.
+*/
 
- .project-item-card {
-    text-decoration: none;
- }
+.title {
+text-align: center;
+}
 
- .project-list-container {
-    max-width: 50%;
-    margin: auto;
- }
+.project-item-card {
+   text-decoration: none;
+}
 
- .project-item-div {
-    display: flex;
-    flex-direction: row;
-    border-style: solid;
-    border-radius: 10px;
-    margin-bottom: 10px;
- }
+.project-list-container {
+   max-width: calc(50%);
+   margin: auto;
+}
 
- .project-item-div:hover {
-    background-color: hsl(287, 100%, 96%);
- }
+.project-item-div {
+   display: flex;
+   flex-direction: row;
+   border-style: solid;
+   border-radius: 10px;
+   margin-bottom: 10px;
+}
 
- .image-container img {
-    max-width: 200px;
-    padding: 10px;
- }
+.project-item-div:hover {
+   background-color: hsl(287, 100%, 96%);
+}
 
- .description-container {
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
- }
+.image-container {
+width: calc(65%);
+}
 
- .project-title {
-    /* background-color: blue; */
-    font-size: 30px;
-    padding-left: 10px;
-    padding-top: 10px;
-    margin: 0px;
- }
+.image-container img {
+   width: 95%;
+   padding: 10px;
+}
 
- .project-tagline {
-    padding: 10px;
-    margin: 0px;
- }
+.description-container {
+   /* background-color: red; */
+   display: inline-block;
+   flex-direction: column;
+   width: calc(35%);
+   margin: auto;
+}
 
- .read-more {
-    padding-left: 10px;
+.project-title {
+   /* background-color: blue; */
+   font-size: 30px;
+   padding-top: 10px;
+   margin: 0px;
+   text-align: center;
+}
+
+.project-tagline {
+   display: inline-block;
+   padding: 10px;
+   margin: 0px;
+   /* overflow: hidden; */
+   text-overflow: ellipsis;
+   text-align: center;
+   /* white-space: nowrap */
+}
+
+.read-more {
+   padding-left: 10px;
+}
+
+@media screen and (max-width: 500px) {
+   .project-list-container {
+      max-width: 100%;
+   }
  }

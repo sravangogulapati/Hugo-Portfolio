@@ -9,7 +9,3 @@ You can call me Sai too.
 I am an aspiring software developer, and I make things in my free time. All sorts of things.
 
 You can find my programming projects on my Github: https://github.com/sravangogulapati
-
-Here's some art I've made.
-
-And here's some music I've made.

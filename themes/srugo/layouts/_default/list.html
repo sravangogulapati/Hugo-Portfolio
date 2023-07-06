@@ -6,20 +6,20 @@
     <link rel="stylesheet" type="text/css" href="/css/list_page_styles.css" /> 
 </head>
 
-<h2>{{ .Title }}</h2>
-    <div class="project-list-container">
-        {{ range .Pages }}
-            <a href="{{ .Permalink }}" class="project-item-card">
-                <div class="project-item-div">
-                    <div class="image-container">
-                        <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-image">
-                    </div>
-                    <div class="description-container">
-                        <h1 class="project-title">{{ .Title }}</h1>
-                        <p class="project-tagline">{{ .Params.tagline }}</p>
-                        <!-- <a  href="{{ .Permalink }}" class="read-more">Read more...</a> -->
-                    </div>
+<h1 class="title">{{ .Title }}</h1>
+<div class="project-list-container">
+    {{ range .Pages }}
+        <a href="{{ .Permalink }}" class="project-item-card">
+            <div class="project-item-div">
+                <div class="image-container">
+                    <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-image">
                 </div>
-            </a>
-        {{ end }}
-    </div>
+                <div class="description-container">
+                    <h1 class="project-title">{{ .Title }}</h1>
+                    <p class="project-tagline">{{ .Params.tagline }}</p>
+                    <!-- <a  href="{{ .Permalink }}" class="read-more">Read more...</a> -->
+                </div>
+            </div>
+        </a>
+    {{ end }}
+</div>

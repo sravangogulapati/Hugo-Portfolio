@@ -1,4 +1,5 @@
 /* Header CSS heavily inspired by from https://www.w3schools.com/howto/howto_css_responsive_header.asp */
+
 body {
   margin: 0px;
 }
@@ -24,9 +25,11 @@ body {
 }
 
 .header a.logo {
+  font-family: 'Sacramento', cursive;
+
   padding: 26px 12px;
   margin: 0px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -37,6 +40,7 @@ body {
 }
 
 .header-right a.active {
+  background-color: blanchedalmond;
   border-left: 2px solid;
   border-right: 2px solid;
   border-radius: 500px;
