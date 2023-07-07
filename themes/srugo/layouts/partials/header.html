@@ -9,7 +9,10 @@
 
 {{ $currentPage := .currentPage }}
 <div class="header">
-    <a href="{{ site.BaseURL }}" class="logo">Sai Sravan Gogulapati</a>
+    <div class="logo-container">
+        <a href="{{ site.BaseURL }}" class="logo">Sai Sravan Gogulapati</a>
+    </div>
+    
     <div class="header-right">
         {{ if eq $currentPage "Home" }}
             <a href="{{ site.BaseURL }}" class="active">Home</a>
