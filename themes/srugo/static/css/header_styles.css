@@ -7,7 +7,7 @@ body {
 .header {
   display: block;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: grey;
   padding: 0px;
   margin: auto;
   /* height: 18mm; */
@@ -23,7 +23,7 @@ body {
   text-decoration: none;
   font-size: 6mm;
   line-height: 8mm;
-  border-radius: 4mm;
+  border-radius: 1px;
 }
 
 .logo-container {
@@ -47,10 +47,12 @@ body {
 }
 
 .header-right a.active {
-  background-color: blanchedalmond;
+  background-color: black;
+  color: white;
   border-left: 2px solid;
   border-right: 2px solid;
   border-radius: 500px;
+  border-color: white;
 }
 
 .header-right {

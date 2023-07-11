@@ -54,14 +54,15 @@ text-align: center;
 
 .project-title {
    /* background-color: blue; */
-   font-size: 30px;
+   font-size: 36px;
    padding-top: 10px;
-   margin: 0px;
+   margin-bottom: 10px;
    text-align: center;
 }
 
 .project-tagline {
    display: inline-block;
+   font-size: 20px;
    padding: 10px;
    margin: 0px;
    overflow: hidden;

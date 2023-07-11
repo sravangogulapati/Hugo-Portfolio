@@ -4,5 +4,13 @@
 }
 
 p {
-    font-size: 1cm;
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+a {
+    font-size: 28px;
 }
