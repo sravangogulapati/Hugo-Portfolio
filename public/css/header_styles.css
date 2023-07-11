@@ -4,10 +4,19 @@ body {
   margin: 0px;
 }
 
+.header-spacer {
+  aspect-ratio: 900/50;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('/svg/header-wave.svg');
+}
+
 .header {
   display: block;
   overflow: hidden;
-  background-color: grey;
+  background-color: #2c20a0;
   padding: 0px;
   margin: auto;
   /* height: 18mm; */
@@ -15,7 +24,7 @@ body {
 
 .header-right a {
   float: left;
-  color: black;
+  color: white;
   text-align: center;
   padding: 3mm 10mm;
   margin: 0mm 2mm;
@@ -37,18 +46,18 @@ body {
   font-size: 8mm;
   font-weight: bold;
   text-decoration: none;
-  color: black;
+  color: #dbcfff;
 }
 
 .header-right a:hover {
-  background-color: #ddd;
+  background-color: #dbcfff;
   color: black;
   border-radius: 500px;
 }
 
 .header-right a.active {
-  background-color: black;
-  color: white;
+  background-color: #dbcfff;
+  color: black;
   border-left: 2px solid;
   border-right: 2px solid;
   border-radius: 500px;

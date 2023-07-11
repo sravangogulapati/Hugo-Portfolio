@@ -1,16 +1,59 @@
+.body {
+    overflow-x: hidden;
+}
+
 .index-content {
-    margin: 10px;
     text-align: center;
 }
 
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 10vw;
+    background: #dbcfff;
+}
+
+.spacer {
+    aspect-ratio: 900/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+.layer2 {
+    background-image: url('/svg/wave2-haikei.svg');
+}
+
 p {
-    font-size: 36px;
+    font-size: 32px;
 }
 
 h3 {
     font-size: 36px;
+    margin: 10px;
 }
 
 a {
     font-size: 28px;
+}
+
+.link-button {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.CSE-label {
+    font-size: 28px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    max-width: 25%;
+    border-radius: 100%;
+    margin-top: 25px;
 }
