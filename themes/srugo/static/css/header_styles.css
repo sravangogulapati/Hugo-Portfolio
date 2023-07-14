@@ -18,11 +18,10 @@ body {
   overflow: hidden;
   background-color: #2c20a0;
   padding: 0px;
-  margin: auto;
-  /* height: 18mm; */
 }
 
 .header-right a {
+  font-family: 'Pangolin', cursive;
   float: left;
   color: white;
   text-align: center;
@@ -42,7 +41,8 @@ body {
 
 .header a.logo {
   font-family: 'Sacramento', cursive;
-  padding: 3mm 3mm;
+  padding: 5mm 3mm;
+  padding-bottom: 0px;
   font-size: 8mm;
   font-weight: bold;
   text-decoration: none;
@@ -66,7 +66,8 @@ body {
 
 .header-right {
   float: right;
-  padding: 2mm 1mm;
+  padding: 5mm 1mm;
+  padding-bottom: 0px;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
