@@ -31,8 +31,8 @@ section {
 .name {
     font-family: 'Pangolin', cursive;
     /* font-family: 'Sacramento', cursive; */
-    font-size: 48px;
-    margin: 18px;
+    font-size: 108px;
+    margin: 28px;
     margin-bottom: 5px;
 }
 
@@ -53,19 +53,46 @@ a {
 
 .CSE-label {
     font-family: 'Pangolin', cursive;
-    font-size: 28px;
+    font-size: 56px;
     margin: 0px;
     margin-bottom: 10px;
 }
 
 .profile-pic {
-    width: 300px;
-    height: 300px;
+    width: 90%;
     border-radius: 100%;
     margin-top: 25px;
     overflow: hidden;
 }
 
 .icons {
-    
+    /* display: flex;
+    flex-direction: row; */
+    /* overflow: visible; */
+}
+
+.icon {
+    width: 150;
+    height: 150;
+}
+
+@media screen and (min-width: 1000px) {
+    .profile-pic {
+        width: 300px;
+        height: 300px;
+    }
+
+    .name {
+        font-size: 48px;
+        margin: 18px;
+    }
+
+    .CSE-label {
+        font-size: 28px;
+    }
+
+    .icon {
+        width: 50;
+        height: 50;
+    }
 }
