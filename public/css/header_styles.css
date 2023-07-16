@@ -7,6 +7,7 @@ body {
 .header-spacer {
   aspect-ratio: 900/50;
   width: 100%;
+  margin-top: -10px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -22,17 +23,17 @@ body {
 
 .header-right a {
   font-family: 'Pangolin', cursive;
+  text-decoration: none;
+  font-size: 82px;
+  line-height: 100px;
   float: none;
   display: block;
   text-align: center;
   color: white;
   text-align: center;
   padding: 3mm 10mm;
-  margin: 0mm 2mm;
+  margin: 10px 2mm;
   margin-bottom: 0px;
-  text-decoration: none;
-  font-size: 6mm;
-  line-height: 8mm;
   border-radius: 1px;
 }
 
@@ -47,7 +48,7 @@ body {
   margin: auto;
   padding: 5mm 3mm;
   padding-bottom: 0px;
-  font-size: 8mm;
+  font-size: 90px;
   font-weight: bold;
   text-decoration: none;
   color: #dbcfff;
@@ -78,6 +79,9 @@ body {
 @media screen and (min-width: 1000px) {
   .header-right a {
     float: left;
+    font-size: 28px;
+    line-height: 28px;
+    margin: 0mm 2mm;
   }
   .header-right {
     float: right;
@@ -86,5 +90,14 @@ body {
   }
   .logo-container {
     float: left;
+  }
+
+  .header a.logo {
+    font-size: 36px;
+  }
+
+  .header-spacer {
+    width: 100%;
+    margin-top: 0px;
   }
 }
