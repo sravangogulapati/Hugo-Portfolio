@@ -1,6 +1,9 @@
-.list-page-section {
-   height: 100%;
+body {
    background-color: #dbcfff;
+}
+
+.list-page-section {
+
 }
 
 .title {
@@ -19,12 +22,13 @@ margin-top: 0px;
 }
 
 .project-item-div {
-   display: flex;
-   flex-direction: column;
+   /* display: flex; */
+   /* flex-direction: column; */
    border-style: solid;
    border-radius: 10px;
    margin-bottom: 10px;
-   max-height: 70%;
+   margin: 10px;
+   /* max-height: 70%; */
 }
 
 .project-item-div:hover {
@@ -82,7 +86,8 @@ margin-top: 0px;
    }
 
    .project-item-div {
-      flex-direction: row;
+      /* flex-direction: row; */
+      width: 30%;
    }
 
    .project-title {

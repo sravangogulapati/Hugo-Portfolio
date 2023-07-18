@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="/css/list_page_styles.css" /> 
 </head>
+<h1 class="title">{{ .Title }}</h1>
 <section class="list-page-section">
-    <h1 class="title">{{ .Title }}</h1>
     <div class="project-list-container">
         {{ range .Pages }}
             <a href="{{ .Permalink }}" class="project-item-card">

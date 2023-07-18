@@ -66,14 +66,15 @@ a {
 }
 
 .icons {
-    /* display: flex;
-    flex-direction: row; */
-    /* overflow: visible; */
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
 }
 
 .icon {
     width: 150;
     height: 150;
+    margin: 5px;
 }
 
 @media screen and (min-width: 1000px) {

@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jun 2023 22:48:46 -0700</lastBuildDate><atom:link href="https://imsravan.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>iSMuG - Senior Design</title>
+      <link>https://imsravan.com/tech/project2/</link>
+      <pubDate>Fri, 30 Jun 2023 16:28:28 -0700</pubDate>
+      
+      <guid>https://imsravan.com/tech/project2/</guid>
+      <description>Interactive Smart Music Generator (iSMuG) is a novel music generator based on human states observed via computer vision (CV) and biomarker sensors. Senior Design Project by Sai Sravan Gogulapati, Kenny Moc, Arushi Arora, and Jade Whiting.
+Our interactive smart music generator employs novel AI music generation and interactive feedback systems based on a user’s human state, which is detected via computer vision and physiological sensors like a heart rate monitor or galvanic skin response sensor.</description>
+    </item>
+    
+    <item>
       <title>Pen-Digitizer</title>
       <link>https://imsravan.com/tech/project1/</link>
       <pubDate>Wed, 28 Jun 2023 23:43:43 -0700</pubDate>
