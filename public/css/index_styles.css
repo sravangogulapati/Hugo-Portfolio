@@ -38,12 +38,13 @@ section {
 
 h3 {
     font-family: 'Pangolin', cursive;
-    font-size: 36px;
+    font-size: 96px;
+    font-weight: normal;
     margin: 10px;
 }
 
 a {
-    font-size: 28px;
+    font-size: 56px;
 }
 
 .link-button {
@@ -95,5 +96,12 @@ a {
     .icon {
         width: 50;
         height: 50;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+    a {
+        font-size: 28px;
     }
 }

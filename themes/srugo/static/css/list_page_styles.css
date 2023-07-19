@@ -7,8 +7,11 @@ body {
 }
 
 .title {
-text-align: center;
-margin-top: 0px;
+   font-family: 'Pangolin', cursive;
+   font-size: 96px;
+   font-weight: normal;
+   text-align: center;
+   margin-top: 0px;
 }
 
 .project-item-card {
@@ -25,7 +28,8 @@ margin-top: 0px;
    /* display: flex; */
    /* flex-direction: column; */
    border-style: solid;
-   border-radius: 10px;
+   border-radius: 30px;
+   border-width: 10px;
    margin-bottom: 10px;
    margin: 10px;
    /* max-height: 70%; */
@@ -58,7 +62,7 @@ margin-top: 0px;
 
 .project-title {
    font-family: 'Sacramento', cursive;
-   font-size: 48px;
+   font-size: 96px;
    padding-top: 10px;
    margin-top: 0px;
    margin-bottom: 10px;
@@ -67,7 +71,7 @@ margin-top: 0px;
 
 .project-tagline {
    display: inline-block;
-   font-size: 20px;
+   font-size: 56px;
    padding: 10px;
    margin: 0px;
    overflow: hidden;
@@ -81,6 +85,10 @@ margin-top: 0px;
 }
 
 @media screen and (min-width: 1000px) {
+   .title {
+      font-size: 36px;
+   }
+   
    .image-container {
       max-width: 60%;
    }
@@ -92,5 +100,19 @@ margin-top: 0px;
 
    .project-title {
       margin-top: 0px;
+      font-size: 48px;
+   }
+
+   .project-tagline {
+      font-size: 20px;
+   }
+
+   .project-item-div {
+      /* display: flex; */
+      /* flex-direction: column; */
+      border-style: solid;
+      border-radius: 10px;
+      border-width: 3px;
+      /* max-height: 70%; */
    }
  }

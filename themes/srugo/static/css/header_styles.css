@@ -7,7 +7,6 @@ body {
 .header-spacer {
   aspect-ratio: 900/50;
   width: 100%;
-  margin-top: -10px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,6 +44,7 @@ body {
 
 .header a.logo {
   font-family: 'Sacramento', cursive;
+  font-weight: normal;
   margin: auto;
   padding: 5mm 3mm;
   padding-bottom: 0px;
