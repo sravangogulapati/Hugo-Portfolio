@@ -34,9 +34,14 @@
         <div class="spacer layer2"></div>
         <section>
             <h3>Some {{ .Title }}:</h3>
-            {{ range .Pages }}
-                <a href="{{ .Permalink }}">{{ .Title }}</p>
-            {{ end }}
+            <div class="project-previews-list-div">
+                {{ range .Pages }}
+                    <div class="project-preview-div">
+                        <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-preview-image">
+                        <a href="{{ .Permalink }}" class="project-preview-title">{{ .Title }}</p>
+                    </div>
+                {{ end }}
+            </div>
             <a href="{{ .Permalink }}">See more...</a>
         </section>
     {{ end }}
