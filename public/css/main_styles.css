@@ -136,6 +136,7 @@ a {
 p {
     font-size: 56px;
     margin-left: 1ch;
+    margin-right: 1ch;
 }
 
 p.project-tagline {
@@ -199,6 +200,13 @@ p.project-tagline {
     text-decoration: none;
     width: 100%;
     text-align: center;
+    margin-bottom: 10px;
+    border-style: solid;
+    padding-top: 10px;
+    /* border-radius: 10px; */
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
 }
 
 .list-page-section .project-title {
@@ -274,7 +282,8 @@ p.project-tagline {
 
     .list-page-section .project-item-card {
         width: 70%;
-        margin:auto
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .list-page-section .project-title {

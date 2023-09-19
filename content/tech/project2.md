@@ -2,7 +2,7 @@
 title: "iSMuG - Senior Design"
 date: 2023-06-30T16:28:28-07:00
 draft: false
-imgLink: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/dog.jpg"
+imgLink: "/images/senior-design-pic.PNG"
 tagline: "Interactive Smart Music Generator (iSMuG) is a novel music generator based on human states observed via computer vision (CV) and biomarker sensors."
 ---
 *Interactive Smart Music Generator (iSMuG) is a novel music generator based on human states observed via computer vision (CV) and biomarker sensors.*
