@@ -1,0 +1,284 @@
+body {
+    margin: 0px;
+    background-color: #dbcfff;
+}
+
+.header-spacer {
+    aspect-ratio: 900/50;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/svg/header-wave.svg');
+}
+
+.header {
+    display: block;
+    overflow: hidden;
+    background-color: #2c20a0;
+    padding: 0px;
+}
+
+.header-right a {
+    font-family: 'Pangolin', cursive;
+    text-decoration: none;
+    font-size: 82px;
+    line-height: 100px;
+    float: none;
+    display: block;
+    text-align: center;
+    color: white;
+    text-align: center;
+    padding: 3mm 10mm;
+    margin: 10px 2mm;
+    margin-bottom: 0px;
+    border-radius: 1px;
+}
+
+.logo-container {
+    display: flex;
+    float: none;
+    text-align: center;
+}
+
+.header a.logo {
+    font-family: 'Sacramento', cursive;
+    font-weight: normal;
+    margin: auto;
+    padding: 5mm 3mm;
+    padding-bottom: 0px;
+    font-size: 90px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #dbcfff;
+}
+
+.header-right a:hover {
+    background-color: #dbcfff;
+    color: black;
+    border-radius: 500px;
+}
+
+.header-right a.active {
+    background-color: #dbcfff;
+    color: black;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-radius: 500px;
+    border-color: white;
+}
+
+.header-right {
+    float: none;
+    padding: 5mm 1mm;
+    padding-bottom: 0px;
+}
+
+.index-content {
+    text-align: center;
+}
+
+.index-content section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 20px 10vw;
+    background: #dbcfff;
+}
+
+.index-content .spacer {
+    aspect-ratio: 900/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+.index-content .layer2 {
+    background-image: url('/svg/wave2-haikei.svg');
+}
+
+/* .index-content .name {
+    font-family: 'Pangolin', cursive;
+    font-size: 108px;
+    margin: 28px;
+    margin-bottom: 5px;
+} 
+
+.index-content .CSE-label {
+    font-family: 'Pangolin', cursive;
+    font-size: 56px;
+    margin: 0px;
+    margin-bottom: 10px;
+} */
+
+h1 {
+    font-family: 'Pangolin', cursive;
+    /* font-family: 'Sacramento', cursive; */
+    font-size: 108px;
+    margin: 28px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-family: 'Pangolin', cursive;
+    font-size: 96px;
+    font-weight: normal;
+    margin: 10px;
+}
+
+a {
+    font-size: 56px;
+}
+
+p {
+    font-size: 56px;
+    margin-left: 1ch;
+}
+
+p.project-tagline {
+    margin-top: 10px;
+}
+
+.index-content .link-button {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.index-content .profile-pic {
+    width: 90%;
+    border-radius: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2c20a0;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.index-content .icons {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.index-content .icon {
+    width: 150;
+    height: 150;
+    margin: 5px;
+}
+
+.index-content .project-previews-list-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.index-content .project-preview-div {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 3px;
+    margin: 10px;
+}
+
+.preview-card-image {
+    width: 200px;
+    margin: auto;
+}
+
+.project-preview-image {
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.list-page-section .project-item-card {
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.list-page-section .project-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 96px;
+    padding-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+ }
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (min-width: 1000px) {
+    .header-right a {
+        float: left;
+        font-size: 28px;
+        line-height: 28px;
+        margin: 0mm 2mm;
+    }
+    .header-right {
+        float: right;
+        padding: 5mm 1mm;
+        padding-bottom: 0px;
+    }
+    .logo-container {
+        float: left;
+    }
+
+    .header a.logo {
+        font-size: 36px;
+    }
+
+    .header-spacer {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .index-content .profile-pic {
+        width: 400px;
+        height: 400px;
+    }
+
+    .index-content .icon {
+        width: 50;
+        height: 50;
+    }
+
+    /* .index-content .name {
+        font-size: 56px;
+        margin: 10px;
+    } 
+    
+    .index-content .CSE-label {
+        font-size: 36px;
+    } */
+    p {
+        font-size: 28px;
+    }
+    a {
+        font-size: 28px;
+    }
+    h1 {
+        font-size: 56px;
+        margin: 10px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 36px;
+    }
+
+    .index-content .project-previews-list-div {
+        flex-direction: row;
+    }
+
+    .list-page-section .project-item-card {
+        width: 70%;
+        margin:auto
+    }
+
+    .list-page-section .project-title {
+        margin-top: 0px;
+        font-size: 48px;
+     }
+}

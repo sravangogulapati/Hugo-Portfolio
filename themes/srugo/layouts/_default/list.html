@@ -1,26 +1,24 @@
-{{ $currentPage := .Title }}
-{{ partial "header.html" (dict "currentPage" $currentPage)}}
+{{ define "main" }}
 
-<head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/css/list_page_styles.css" /> 
-</head>
-<h1 class="title">{{ .Title }}</h1>
-<section class="list-page-section">
-    <div class="project-list-container">
-        {{ range .Pages }}
-            <a href="{{ .Permalink }}" class="project-item-card">
-                <div class="project-item-div">
-                    <div class="image-container">
-                        <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-image">
+    {{ $currentPage := .Title }}
+    {{ partial "header.html" (dict "currentPage" $currentPage)}}
+
+    <h1 class="title">{{ .Title }}</h1>
+    <section class="list-page-section">
+        <div class="project-list-container">
+            {{ range .Pages }}
+                <div class="project-item-card">
+                    <div class="project-preview-image-container">
+                        <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-preview-image">
                     </div>
                     <div class="description-container">
-                        <h1 class="project-title">{{ .Title }}</h1>
+                        <h1><a href="{{ .Permalink }}" class="project-title">{{ .Title }}</a></h1>
                         <p class="project-tagline">{{ .Params.tagline }}</p>
                         <!-- <a  href="{{ .Permalink }}" class="read-more">Read more...</a> -->
                     </div>
                 </div>
-            </a>
-        {{ end }}
-    </div>
-</section>
+            {{ end }}
+        </div>
+    </section>
+
+{{ end }}

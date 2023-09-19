@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-section {
+.index-content section {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ section {
     background: #dbcfff;
 }
 
-.spacer {
+.index-content .spacer {
     aspect-ratio: 900/100;
     width: 100%;
     background-repeat: no-repeat;
@@ -24,16 +24,50 @@ section {
     background-size: cover;
   }
   
-.layer2 {
+.index-content .layer2 {
     background-image: url('/svg/wave2-haikei.svg');
 }
 
-.name {
+.index-content .name {
     font-family: 'Pangolin', cursive;
     /* font-family: 'Sacramento', cursive; */
     font-size: 108px;
     margin: 28px;
     margin-bottom: 5px;
+}
+
+.index-content .link-button {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.index-content .CSE-label {
+    font-family: 'Pangolin', cursive;
+    font-size: 56px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.index-content .profile-pic {
+    width: 90%;
+    border-radius: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2c20a0;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.index-content .icons {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.index-content .icon {
+    width: 150;
+    height: 150;
+    margin: 5px;
 }
 
 h3 {
@@ -47,47 +81,13 @@ a {
     font-size: 56px;
 }
 
-.link-button {
-    text-decoration: none;
-    margin: 10px;
-}
-
-.CSE-label {
-    font-family: 'Pangolin', cursive;
-    font-size: 56px;
-    margin: 0px;
-    margin-bottom: 10px;
-}
-
-.profile-pic {
-    width: 90%;
-    border-radius: 100%;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #2c20a0;
-    margin-top: 25px;
-    overflow: hidden;
-}
-
-.icons {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-}
-
-.icon {
-    width: 150;
-    height: 150;
-    margin: 5px;
-}
-
-.project-previews-list-div {
+.index-content .project-previews-list-div {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.project-preview-div {
+.index-content .project-preview-div {
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -97,7 +97,7 @@ a {
     margin: 10px;
 }
 
-.project-preview-image {
+.index-content .project-preview-image {
     width: 200px;
     margin: auto;
 }
@@ -108,16 +108,16 @@ a {
         height: 300px;
     }
 
-    .name {
+    .index-content .name {
         font-size: 48px;
         margin: 18px;
     }
 
-    .CSE-label {
+    .index-content .CSE-label {
         font-size: 28px;
     }
 
-    .icon {
+    .index-content .icon {
         width: 50;
         height: 50;
     }

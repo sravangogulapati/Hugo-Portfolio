@@ -1,8 +1,12 @@
-{{ $currentPage := .Title }}
-{{ partial "header.html" (dict "currentPage" $currentPage)}}
+{{ define "main" }}
 
-<a href='{{ printf "%s%s" site.BaseURL .Section }}'><- {{ .Section }}</a>
-<h2>{{ .Title }}</h2>
-<p>
-    {{ .Content }}
-</p>
+    {{ $currentPage := .Title }}
+    {{ partial "header.html" (dict "currentPage" $currentPage)}}
+
+    <a href='{{ printf "%s%s" site.BaseURL .Section }}'>< All {{ .Section }}</a>
+    <h1>{{ .Title }}</h1>
+    <p>
+        {{ .Content }}
+    </p>
+
+{{ end }}
