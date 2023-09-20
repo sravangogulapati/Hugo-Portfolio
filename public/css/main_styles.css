@@ -129,6 +129,13 @@ h2 {
     margin: 10px;
 }
 
+h3 {
+    font-family: 'Pangolin', cursive;
+    font-size: 56px;
+    font-weight: normal;
+    margin: 5px;
+}
+
 a {
     font-size: 56px;
 }
@@ -274,6 +281,9 @@ p.project-tagline {
     }
     h2 {
         font-size: 36px;
+    }
+    h3 {
+        font-size: 28px;
     }
 
     .index-content .project-previews-list-div {

@@ -12,7 +12,11 @@
                         <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-preview-image">
                     </div>
                     <div class="description-container">
-                        <h1><a href="{{ .Permalink }}" class="project-title">{{ .Title }}</a></h1>
+                        {{ if eq $currentPage "Art" }}
+                            <h1 class="project-title">{{ .Title }}</h1>
+                        {{ else }}
+                            <h1><a href="{{ .Permalink }}" class="project-title">{{ .Title }}</a></h1>
+                        {{ end }}
                         <p class="project-tagline">{{ .Params.tagline }}</p>
                         <!-- <a  href="{{ .Permalink }}" class="read-more">Read more...</a> -->
                     </div>

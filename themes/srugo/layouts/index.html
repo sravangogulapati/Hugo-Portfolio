@@ -30,14 +30,15 @@
             <section>
                 <h2>Some {{ .Title }}:</h2>
                 <div class="project-previews-list-div">
-                    {{ range .Pages }}
+                    {{ range first 3 .Pages }}
                         <div class="project-preview-div">
                             <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="preview-card-image">
-                            <a href="{{ .Permalink }}" class="project-preview-title">{{ .Title }}</p>
+                            <!-- <a href="{{ .Permalink }}" class="project-preview-title">{{ .Title }}</p> -->
+                            <h3>{{ .Title }}</h3>
                         </div>
                     {{ end }}
                 </div>
-                <a href="{{ .Permalink }}">See more...</a>
+                <h2><a href="{{ .Permalink }}">See All...</a></h2>
             </section>
         {{ end }}
     </div>
