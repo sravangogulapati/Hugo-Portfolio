@@ -8,5 +8,8 @@
     <p>
         {{ .Content }}
     </p>
+    {{ if (isset .Params "htmlpage") }}
+        <h1>{{ partial .Params.htmlpage . }}</h1>
+    {{ end }}
 
 {{ end }}
