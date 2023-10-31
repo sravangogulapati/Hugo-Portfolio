@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/main_styles.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head><body>
+        <div id="content">
+
+    
+    
+<div class="header">
+    <div class="logo-container">
+        <a href="https://imsravan.com/" class="logo">Sai Sravan Gogulapati</a>
+    </div>
+    
+    <div class="header-right">
+        
+            <a href="https://imsravan.com/">Home</a>
+        
+        
+            
+                
+                    <a href="https://imsravan.com/art/">Art</a>
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+                    <a href="https://imsravan.com/tech/">Tech</a>
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</div>
+<div class="header-spacer"></div>
+
+    <a href='https://imsravan.com/tech'>&lt; All tech</a>
+    <h1>Make-this-out-of-that-inator</h1>
+    <p>
+        <p>Drag two images in and press the green button :)</p>
+
+    </p>
+    
+        <h1><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        display: inline-block;
+      }
+
+      #prompt {
+        display: inline-flex;
+        flex-direction: row;
+      }
+
+      #prompt h2 {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      #controls {
+        display: inline-flex;
+        flex-direction: row;
+      }
+
+      .controls_btn {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-radius: 50%;
+        border-style: dashed;
+        cursor: pointer;
+      }
+
+      .green_btn {
+        background-color: lightgreen;
+      }
+      .green_btn:hover{
+        background-color: rgb(136,214,136);
+      }
+
+      .blue_btn {
+        background-color: rgb(167,232,253);
+      }
+      .blue_btn:hover {
+        background-color: rgb(144,199,217);
+      }
+
+      .gray_btn:hover {
+        background-color: lightgray;
+      }
+
+      .dropzone {
+        position: relative;
+        border-style: dashed;
+        margin: 10px;
+        height: 100px;
+        width: 100px;
+        text-align: center;
+      }
+
+      .dropzone p {
+        display: block;
+        position: absolute;
+       
+        z-index: -1;
+        text-align: center;
+        color: #AA9696; 
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .dropzone img {
+        max-height: 100px;
+        max-width: 100px;
+      }
+
+      .highlighted {
+        background-color: lightgray;
+      }
+
+      #slider-div {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      #slider {
+        display: block;
+        margin-right: 10px;
+      }
+
+      #slider::-webkit-slider-thumb {
+        cursor: pointer;
+      }
+
+      #slider-value-p {
+        margin: 0px;
+        margin-left: 10px;
+        text-align: center;
+      }
+
+    </style>
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+      <div id="prompt">
+        <h2>Make</h2>
+        <div class="dropzone" id="drop1">
+          <p>Drop image here.</p>
+        </div>
+        <h2>out of</h2>
+        <div class="dropzone" id="drop2">
+          <p>Drop image here.</p>
+        </div>
+
+      </div>
+      <br>
+      <div id="controls">
+        <button class="controls_btn green_btn" id="generate_btn">
+          <span class="material-symbols-outlined" id="replay-logo">
+            replay
+          </span>
+          <span class="material-symbols-outlined" id="play-logo">
+            play_arrow
+          </span>
+        </button>
+        <button class="controls_btn gray_btn" id="play_pause_btn">
+          <span class="material-symbols-outlined">
+            play_pause
+          </span>
+        </button>
+        <p id="slider-value-p"><span id="slider-value"></span> px</p>
+        <div id="slider-div">
+        </div>
+        <button class="controls_btn gray_btn" id="download_btn">
+          <span class="material-symbols-outlined">
+            download
+          </span>
+        </button>
+      </div>
+      <br>
+    </main>
+
+    <script defer>
+      let c;
+      let drop1;
+      let drop2;
+      let img1;
+      let img2;
+      let image1;
+      let image2;
+      let img1InUse;
+      let img2InUse;
+      let img1set = false;
+      let img2tonfalse;
+      let generating = false;
+      let generation_begun = false;
+      let slider;
+      let genButton;
+      let playLogo;
+      let replayLogo;
+      const SLIDER_MIN = 5;
+      const SLIDER_MAX = 40;
+
+      function setup() {
+        c = createCanvas(0, 0);
+        background(0);
+        
+        drop1 = select('#drop1');
+        drop1.dragOver(() => {highlight(drop1)});
+        drop1.dragLeave(() => {unhighlight(drop1)});
+        drop1.drop(gotFile1, () => {unhighlight(drop1)});
+        
+        drop2 = select('#drop2');
+        drop2.dragOver(() => {highlight(drop2)});
+        drop2.dragLeave(() => {unhighlight(drop2)});
+        drop2.drop(gotFile2, () => {unhighlight(drop2)});
+        
+        slider = createSlider(SLIDER_MIN, SLIDER_MAX, 10);
+        slider.id("slider");
+        slider.parent("slider-div");
+        let valuePreview = document.getElementById("slider-value");
+        valuePreview.innerHTML = slider.value();
+        slider.input(() => {
+          valuePreview.innerHTML = slider.value();
+        });
+        
+        genButton = select("#generate_btn");
+        genButton.mousePressed(generate);
+        playLogo = select("#play-logo");
+        replayLogo = select("#replay-logo");
+        replayLogo.hide();
+        
+        let pauseBtn = select("#play_pause_btn");
+        pauseBtn.mousePressed(() => {if (generation_begun) generating = !generating});
+        
+        let downloadBtn = select("#download_btn");
+        downloadBtn.mousePressed(() => {if (generation_begun) save();});
+        
+      }
+
+      function generate() {
+        if (img1set && img2set) {
+          img1InUse = image1;
+          img2InUse = image2;
+          generating = true;
+          generation_begun = true;
+          genButton.removeClass("green_btn");
+          genButton.addClass("blue_btn");
+          playLogo.hide();
+          replayLogo.show();
+          resizeCanvas(img1InUse.width, img1InUse.height);
+
+          background(0);
+        }
+      }
+
+      function highlight(obj) {
+        obj.addClass('highlighted')
+      }
+
+      function unhighlight(obj) {
+        obj.removeClass('highlighted')
+      }
+
+      function gotFile1(file) {
+        print(file.name);
+        print(file.type);
+        if (img1) {
+          img1.remove();
+        }
+        image1 = loadImage(file.data)
+        img1 = createImg(file.data, '')
+        img1.parent("drop1")
+        img1set = true;
+      }
+
+      function gotFile2(file) {
+        print(file.name);
+        print(file.type);
+        if (img2) {
+          img2.remove();
+        }
+        image2 = loadImage(file.data)
+        image2.resize(SLIDER_MAX, 0)
+        img2 = createImg(file.data, '')
+        img2.parent("drop2");
+        img2set = true;
+      }
+
+      function draw() {
+        if (generating) {
+          for (let i = 0; i < 100 + 300 * (int)(width/200); i++) {
+            let x = random(width);
+            let y = random(height);
+            
+            let pixel = img1InUse.get(x, y);
+            let r = red(pixel);
+            let g = green(pixel);
+            let b = blue(pixel);
+            let val = 0.299 * r + 0.587 * g + 0.114 * b;
+
+            tint(val);
+            let w = slider.value();
+            image(img2InUse, (int)(x - w/2), (int)(y - w/2), w, w);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+</h1>
+    
+
+
+        </div></body>
+</html>

@@ -19,11 +19,20 @@ Our interactive smart music generator employs novel AI music generation and inte
     
     <item>
       <title>Make-this-out-of-that-inator</title>
-      <link>https://imsravan.com/tech/project1-copy/</link>
+      <link>https://imsravan.com/tech/project3/</link>
       <pubDate>Wed, 28 Jun 2023 23:43:43 -0700</pubDate>
       
-      <guid>https://imsravan.com/tech/project1-copy/</guid>
+      <guid>https://imsravan.com/tech/project3/</guid>
       <description>Drag two images in and press the green button :)</description>
+    </item>
+    
+    <item>
+      <title>Math Expression Evaluator</title>
+      <link>https://imsravan.com/tech/project4/</link>
+      <pubDate>Wed, 28 Jun 2023 23:43:43 -0700</pubDate>
+      
+      <guid>https://imsravan.com/tech/project4/</guid>
+      <description>A read-eval-print loop (REPL) for a simple math expression parser I made in Python. It supports Parentheses, Exponents(^), Multiplication, Division, Addition, and Subtraction. For learning purposes, I hosted the Python script as an AWS Lambda function with a web API deployed using AWS API Gateway. This frontend app is calling the Web API using Axios, a Javascript library.</description>
     </item>
     
     <item>
