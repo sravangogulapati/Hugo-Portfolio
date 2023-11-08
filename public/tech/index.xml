@@ -44,5 +44,14 @@ Our interactive smart music generator employs novel AI music generation and inte
       <description>A pen attachment that digitizes your handwriting live. CS-147 Final Project by Sai Sravan Gogulapati and Barr Avrahamov. We set out to make a quick and user-friendly way for people to digitize their notes as they write with their pen. The goal by the end of the quarter was to have a device that we can draw shapes with and see the drawings we made on our computer. We made the device using an ESP32, gyroscope, and a battery pack.</description>
     </item>
     
+    <item>
+      <title>Popular Music Videos</title>
+      <link>https://imsravan.com/tech/project5/</link>
+      <pubDate>Wed, 28 Jun 2023 23:43:43 -0700</pubDate>
+      
+      <guid>https://imsravan.com/tech/project5/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

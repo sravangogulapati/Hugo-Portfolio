@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/main_styles.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head><body>
+        <div id="content">
+
+    
+    
+<div class="header">
+    <div class="logo-container">
+        <a href="https://imsravan.com/" class="logo">Sai Sravan Gogulapati</a>
+    </div>
+    
+    <div class="header-right">
+        
+            <a href="https://imsravan.com/">Home</a>
+        
+        
+            
+                
+                    <a href="https://imsravan.com/art/">Art</a>
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+                    <a href="https://imsravan.com/tech/">Tech</a>
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</div>
+<div class="header-spacer"></div>
+
+    <a href='https://imsravan.com/tech'>&lt; All tech</a>
+    <h1>Popular Music Videos</h1>
+    <p>
+        
+    </p>
+    
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style>
+    #prompt h2 {
+        text-align: center;
+    }
+
+    .date-div {
+        text-align: center;
+    }
+    
+    .date {
+        font-size: 28px;
+    }
+
+    #go-btn {
+        font-size: 25px;
+    }
+
+    #btn-div {
+        text-align: center;
+    }
+
+    #go-btn {
+        margin: 10px;
+    }
+
+    li {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+</style>
+
+<div id="prompt">
+    <h2>The most viewed music videos</h2>
+    <h2>published between </h2>
+    <div class="date-div">
+        <input type="date" class="date" id="start-date" value="2020-01-01" min="2010-01-01" max="2023-12-31" />
+    </div>
+    <h2> and </h2>
+    <div class="date-div">
+        <input type="date" class="date" id="end-date" value="2021-01-01" min="2010-01-01" max="2023-12-31" />
+    </div>    
+</div>
+<div id="btn-div">
+    <button id="go-btn" onclick="dothings()">Go</button>
+</div>
+<br>
+<div id="response-div">
+  <ol id="response-ol"></ol>
+</div>
+
+<script>
+    function escape(badString) {
+    return badString.replaceAll("&amp;", "&").replaceAll("&quot;", "\"").replaceAll("&apos;", "'").replaceAll("&gt;", ">").replaceAll("&lt;", "<").replaceAll("&#39;", "'");
+  }
+  
+  function dothings() {
+    let start = document.getElementById("start-date");
+    let end = document.getElementById("end-date");
+    const start_date = new Date(start.value);
+    const end_date = new Date(end.value);
+    if (start_date >= end_date) {
+      console.log("Dates must be at least one day apart. Try again.");
+      const response_div = document.getElementById("response-div");
+      while (response_div.lastElementChild) {
+        response_div.removeChild(response_div.lastElementChild);
+      }
+      
+      const p = document.createElement('p');
+      var textnode=document.createTextNode("Dates must be at least one day apart. Try again.");
+      p.appendChild(textnode);
+      response_div.appendChild(p);
+    } else {
+      const start_param = encodeURIComponent(start_date.toISOString());
+      const end_param = encodeURIComponent(end_date.toISOString());
+      
+      axios({
+        method: 'get',
+        url: 'https://ujlwnm4rp9.execute-api.us-east-1.amazonaws.com/DeployStage/interactives/music-videos',
+        params: {
+          start: start_param,
+          end: end_param
+        }
+      }).then(function (response) {
+          
+          let result = response.data;
+          const response_div = document.getElementById("response-div");
+          while (response_div.lastElementChild) {
+            response_div.removeChild(response_div.lastElementChild);
+          }
+          const response_ol = document.createElement("ol");
+          response_ol.id = "response-ol";
+          response_div.appendChild(response_ol);
+          for (i in result['items']) {
+            
+            const li = document.createElement('li');
+            const title = escape(decodeURI(result['items'][i]['snippet']['title']));
+            console.log(title);
+            var textnode=document.createTextNode(title);
+            li.appendChild(textnode);
+            response_ol.appendChild(li);
+          }
+        });
+      
+    }
+  }
+</script>
+    
+
+
+        </div></body>
+</html>

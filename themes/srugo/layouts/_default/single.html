@@ -9,7 +9,7 @@
         {{ .Content }}
     </p>
     {{ if (isset .Params "interactive") }}
-        <h1>{{ partial .Params.interactive . }}</h1>
+        {{ partial .Params.interactive . }}
     {{ end }}
 
 {{ end }}
