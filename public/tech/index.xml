@@ -28,11 +28,11 @@ Our interactive smart music generator employs novel AI music generation and inte
     
     <item>
       <title>Math Expression Evaluator</title>
-      <link>https://imsravan.com/tech/project4/</link>
+      <link>https://imsravan.com/tech/project4-2/</link>
       <pubDate>Wed, 28 Jun 2023 23:43:43 -0700</pubDate>
       
-      <guid>https://imsravan.com/tech/project4/</guid>
-      <description>A read-eval-print loop (REPL) for a simple math expression parser I made in Python. It supports Parentheses, Exponents(^), Multiplication, Division, Addition, and Subtraction. For learning purposes, I hosted the Python script as an AWS Lambda function with a web API deployed using AWS API Gateway. This frontend app is calling the Web API using Axios, a Javascript library.</description>
+      <guid>https://imsravan.com/tech/project4-2/</guid>
+      <description>Tech stack: Python, ANTLR, AWS Lambda, AWS API Gateway.</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ Our interactive smart music generator employs novel AI music generation and inte
       <pubDate>Wed, 28 Jun 2023 23:43:43 -0700</pubDate>
       
       <guid>https://imsravan.com/tech/project5/</guid>
-      <description></description>
+      <description>YouTube API and AWS Lambda. Idea credit: Yuktha C.</description>
     </item>
     
   </channel>

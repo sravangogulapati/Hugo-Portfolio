@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/main_styles.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head><body>
+        <div id="content">
+
+    
+    
+<div class="header">
+    <div class="logo-container">
+        <a href="https://imsravan.com/" class="logo">Sai Sravan Gogulapati</a>
+    </div>
+    
+    <div class="header-right">
+        
+            <a href="https://imsravan.com/">Home</a>
+        
+        
+            
+                
+                    <a href="https://imsravan.com/art/">Art</a>
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+                    <a href="https://imsravan.com/tech/">Tech</a>
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</div>
+<div class="header-spacer"></div>
+
+    <a href='https://imsravan.com/tech'>&lt; All tech</a>
+    <h1>Math Expression Evaluator</h1>
+    <p>
+        <p>Tech stack: Python, ANTLR, AWS Lambda, AWS API Gateway.</p>
+
+    </p>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<style>
+  #whole-div {
+    width: 50ch;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+  }
+
+  #screen {
+    border-style: solid;
+    height: 300px;
+    padding: 6px;
+    overflow: auto;
+  }
+  #screen::-webkit-scrollbar {
+    display: none;
+  }
+
+  .question {
+    font-family: 'Ubuntu Mono', monospace;
+   
+    padding: 5px;
+    padding-bottom: 0px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+   
+    text-align: left;
+  }
+
+  .answer {
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold;
+   
+    text-align: right;
+    padding: 5px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+   
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+  }
+
+  #entry-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  #entry {
+    overflow: hidden;
+    resize: none;
+    width: 100%;
+    padding: 5px;
+   
+    font-size: 56px;
+    font-family: 'Ubuntu Mono', monospace;
+    padding-left: 10px;
+    background-color: #dbcfff;
+    border-width: 2.5px;
+    border-top-width: 0px;
+    border-color: black;
+  }
+  #submit-btn {
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+     
+    border-color: black;
+    border-style: solid;
+    border-width: 2.5px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    #entry {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<div id="whole-div">
+  <div id="screen">
+    <p class='question'>5 + 5</p>
+    <p class='answer'>10</p>
+  </div>
+  <div id='entry-div'>
+    <textarea id='entry' rows=1 onkeydown="keyup(event)" placeholder="Type expression here..."></textarea>
+    <button id='submit-btn' onclick="get_answer()">
+      <span class="material-symbols-outlined">
+        keyboard_return
+      </span>
+    </button>
+  </div>
+</div>
+
+<script>
+  function keyup(event) {
+    console.log(event);
+    if (event.keyCode == 13) get_answer();
+  }
+  
+  function get_answer() {
+    const textarea = document.getElementById("entry");
+    const entry = textarea.value;
+    textarea.value = ""
+    
+    const questionPara = document.createElement("p");
+    questionPara.className = "question";
+    const question = document.createTextNode(entry);
+    questionPara.appendChild(question);
+    
+    const screen = document.getElementById("screen");
+    screen.appendChild(questionPara);
+    
+    axios({
+      method: 'get',
+      url: 'https://ujlwnm4rp9.execute-api.us-east-1.amazonaws.com/DeployStage/interactives/better-calc',
+      params: {
+        expr: entry
+      }
+    }).then(function (response) {
+        let result = response.data.answer;
+        const answerPara = document.createElement("p");
+        answerPara.className = 'answer';
+        const answer = document.createTextNode(result);
+        answerPara.appendChild(answer);
+        screen.appendChild(answerPara);
+        
+        
+      
+        textarea.value = "";
+        screen.scrollTop = screen.scrollHeight;
+      });
+    
+  }
+</script>
+    
+
+
+        </div></body>
+</html>
