@@ -244,6 +244,16 @@ p.project-tagline {
     max-width: 100%;
 }
 
+.tech-homepage-previews-list-div .project-preview-title {
+    text-decoration: none;
+}
+.tech-homepage-previews-list-div .project-preview-title:hover {
+    /* color: #dbcfff; */
+    /* background-color: #2c20a0; */
+    transform: translateY(-2px);
+    text-decoration: underline;
+}
+
 .list-page-section .project-item-card {
     text-decoration: none;
     width: 100%;

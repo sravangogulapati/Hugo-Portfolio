@@ -6,7 +6,7 @@
     <h1 class="title">{{ .Title }}</h1>
     <section class="list-page-section">
         <div class="project-list-container">
-            {{ range .Pages }}
+            {{ range (sort .Pages "Params.order") }}
                 <div class="project-item-card">
                     <div class="project-preview-image-container">
                         <img src="{{ .Params.imgLink }}" alt="Image of {{ .Title }}" class="project-preview-image">

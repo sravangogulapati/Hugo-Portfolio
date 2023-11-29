@@ -30,21 +30,36 @@
                 <h1>{{.Title}}</h1>
             {{ end }}
         {{ end }} -->
-        {{ range site.Sections }}
-            <div class="spacer layer2"></div>
-            <section>
-                <h2>Some {{ .Title }}:</h2>
-                <div class="project-previews-list-div">
-                    {{ range first 3 .Pages }}
-                        <div class="project-preview-div" style="background-image: url({{ .Params.imgLink }});">
-                            <!-- <a href="{{ .Permalink }}" class="project-preview-title">{{ .Title }}</p> -->
-                            <h3>{{ .Title }}</h3>
-                        </div>
-                    {{ end }}
-                </div>
-                <a href="{{ .Permalink }}" class="button-28">See All...</a>
-            </section>
-        {{ end }}
+        <div class="spacer layer2"></div>
+        <section>
+            <h2>Some Art:</h2>
+            {{ with site.GetPage "section" "art" }}
+            {{ $artpagelink := .Permalink }}
+            <div class="project-previews-list-div">
+                {{ range first 3 .Pages }}
+                <a href="{{$artpagelink}}">
+                    <div class="project-preview-div" style="background-image: url({{ .Params.imgLink }});">
+                        <!-- <a href="{{ .Permalink }}" class="project-preview-title">{{ .Title }}</p> -->
+                        <h3>{{ .Title }}</h3>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+            <a href="{{ .Permalink }}" class="button-28">See All...</a>
+            {{ end }}
+        </section>
+        <div class="spacer layer2"></div>
+        <section>
+            <h2>Some Tech:</h2>
+            {{ with site.GetPage "section" "tech" }}
+            <div class="tech-homepage-previews-list-div">
+                {{ range first 3 (sort .Pages "Params.order") }}
+                <a href="{{ .Permalink }}" class="project-preview-title"><h2>{{ .Title }}</h2></a>
+                {{ end }}
+            </div>
+            <a href="{{ .Permalink }}" class="button-28">See All...</a>
+            {{ end }}
+        </section>
     </div>
 
 {{ end }}
