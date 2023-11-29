@@ -151,10 +151,10 @@ p.project-tagline {
     margin-top: 10px;
 }
 
-.index-content .link-button {
+/* .index-content .link-button {
     text-decoration: none;
     margin: 10px;
-}
+} */
 
 .index-content .profile-pic {
     width: 90%;
@@ -166,6 +166,18 @@ p.project-tagline {
     overflow: hidden;
 }
 
+.index-content .icon-link {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+/* .index-content .icon-link:hover {
+    color: #dbcfff;
+    background-color: #2c20a0;
+    transform: translateY(-2px);
+} */
+
 .index-content .icons {
     display: flex;
     flex-direction: row;
@@ -176,6 +188,17 @@ p.project-tagline {
     width: 150;
     height: 150;
     margin: 5px;
+}
+
+.index-content .icon:hover {
+    background-color: #2c20a0;
+    /* transform: translateY(-2px); */
+}
+.github-icon:hover {
+    border-radius: 100%;
+}
+.linkedin-icon:hover {
+    border-radius: 5%;
 }
 
 .index-content .project-previews-list-div {
@@ -316,6 +339,7 @@ p.project-tagline {
     .index-content .icon {
         width: 50;
         height: 50;
+        color: "red";
     }
 
     /* .index-content .name {
