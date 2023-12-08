@@ -5,6 +5,7 @@ draft: false
 order: 4
 imgLink: "https://drive.google.com/uc?export=view&id=1QZosSoPKXmI-vdP4zAEZA0NvbGyPAZw4"
 tagline: "A pen attachment that digitizes your handwriting live. CS-147 Final Project by Sai Sravan Gogulapati and Barr Avrahamov."
+externalLink: "https://github.com/sravangogulapati/Pen-Digitizer"
 ---
 *A pen attachment that digitizes your handwriting live.*<br>
 CS-147 Final Project by Sai Sravan Gogulapati and Barr Avrahamov.<br>

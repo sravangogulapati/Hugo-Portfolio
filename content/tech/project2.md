@@ -5,6 +5,7 @@ draft: false
 order: 5
 imgLink: "/images/senior-design-pic.PNG"
 tagline: "Interactive Smart Music Generator (iSMuG) is a novel music generator based on human states observed via computer vision (CV) and biomarker sensors."
+externalLink: "https://github.com/Alexa-Paly-Spepsijnto/ISMuG"
 ---
 *Interactive Smart Music Generator (iSMuG) is a novel music generator based on human states observed via computer vision (CV) and biomarker sensors.*
 Senior Design Project by Sai Sravan Gogulapati, Kenny Moc, Arushi Arora, and Jade Whiting.

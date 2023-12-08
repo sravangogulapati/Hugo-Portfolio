@@ -15,7 +15,11 @@
                         {{ if eq $currentPage "Art" }}
                             <h1 class="project-title">{{ .Title }}</h1>
                         {{ else }}
-                            <h1><a href="{{ .Permalink }}" class="project-title">{{ .Title }}</a></h1>
+                            {{ if (isset .Params "externallink") }}
+                                <h1><a href="{{ .Params.externalLink }}" class="project-title">{{ .Title }}</a></h1>
+                            {{ else }}
+                                <h1><a href="{{ .Permalink }}" class="project-title">{{ .Title }}</a></h1>
+                            {{ end }}
                         {{ end }}
                         <p class="project-tagline">{{ .Params.tagline }}</p>
                         <!-- <a  href="{{ .Permalink }}" class="read-more">Read more...</a> -->
