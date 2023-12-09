@@ -174,23 +174,25 @@
       let playLogo;
       let replayLogo;
       const SLIDER_MIN = 5;
-      const SLIDER_MAX = 40;
+      const SLIDER_MAX = 200;
+
+      let working_i = 0;
 
       function setup() {
         c = createCanvas(0, 0);
         background(0);
-        
+
         drop1 = select('#drop1');
         drop1.dragOver(() => {highlight(drop1)});
         drop1.dragLeave(() => {unhighlight(drop1)});
         drop1.drop(gotFile1, () => {unhighlight(drop1)});
-        
+
         drop2 = select('#drop2');
         drop2.dragOver(() => {highlight(drop2)});
         drop2.dragLeave(() => {unhighlight(drop2)});
         drop2.drop(gotFile2, () => {unhighlight(drop2)});
-        
-        slider = createSlider(SLIDER_MIN, SLIDER_MAX, 10);
+
+        slider = createSlider(SLIDER_MIN, SLIDER_MAX, 20);
         slider.id("slider");
         slider.parent("slider-div");
         let valuePreview = document.getElementById("slider-value");
@@ -198,25 +200,25 @@
         slider.input(() => {
           valuePreview.innerHTML = slider.value();
         });
-        
+
         genButton = select("#generate_btn");
         genButton.mousePressed(generate);
         playLogo = select("#play-logo");
         replayLogo = select("#replay-logo");
         replayLogo.hide();
-        
+
         let pauseBtn = select("#play_pause_btn");
         pauseBtn.mousePressed(() => {if (generation_begun) generating = !generating});
-        
+
         let downloadBtn = select("#download_btn");
         downloadBtn.mousePressed(() => {if (generation_begun) save();});
-        
+
       }
 
       function generate() {
         if (img1set && img2set) {
-          img1InUse = image1;
-          img2InUse = image2;
+          img1InUse = image1.get();
+          img2InUse = image2.get();
           generating = true;
           generation_begun = true;
           genButton.removeClass("green_btn");
@@ -224,8 +226,10 @@
           playLogo.hide();
           replayLogo.show();
           resizeCanvas(img1InUse.width, img1InUse.height);
-
+          
           background(0);
+          
+          working_i = 0;
         }
       }
 
@@ -264,10 +268,29 @@
 
       function draw() {
         if (generating) {
-          for (let i = 0; i < 100 + 300 * (int)(width/200); i++) {
-            let x = random(width);
-            let y = random(height);
-            
+          ar = img2InUse.height / img2InUse.width;
+          // print(ar);
+          let w = slider.value();
+          let h = w * ar;
+          // print(w, h)
+          img2InUse.resize(w, h);
+          
+          layer(0,0, w, h);
+          
+          working_i += 1;
+          if (working_i > width/w) {
+            generating = false;
+            working_i = 0;
+          }
+        }
+      }
+
+      function layer(x_off, y_off, w, h) {
+        for (let num_layers = 1; num_layers < 4; num_layers++) {
+          for (let j = 0; j < height/h; j++) {
+            let x = (int)(working_i*w) + x_off + (int)(random(-w/(4/num_layers), w/(4/num_layers))); 
+            let y = (int)(j*h) + y_off + (int)(random(-h/(4/num_layers), h/(4/num_layers))); 
+
             let pixel = img1InUse.get(x, y);
             let r = red(pixel);
             let g = green(pixel);
@@ -275,8 +298,7 @@
             let val = 0.299 * r + 0.587 * g + 0.114 * b;
 
             tint(val);
-            let w = slider.value();
-            image(img2InUse, (int)(x - w/2), (int)(y - w/2), w, w);
+            image(img2InUse, (int)(x - w/2), (int)(y - w/2));
           }
         }
       }
