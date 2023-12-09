@@ -79,7 +79,7 @@
 
   #screen {
     border-style: solid;
-    height: 300px;
+    height: 90vh;
     padding: 6px;
     overflow: auto;
   }
@@ -124,7 +124,7 @@
     width: 100%;
     padding: 5px;
    
-    font-size: 36px;
+    font-size: 56px;
     font-family: 'Ubuntu Mono', monospace;
     padding-left: 10px;
     background-color: #dbcfff;
@@ -154,6 +154,9 @@
       margin-right: auto;
       margin-left: auto;
     }
+    #screen {
+      height: 300px;
+    }
 
     #submit-btn {
       padding-left: 10px;
@@ -180,7 +183,7 @@
 
 <script>
   function keyup(event) {
-    console.log(event);
+    
     if (event.keyCode == 13) get_answer();
   }
   
