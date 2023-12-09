@@ -25,6 +25,47 @@
                 </a>
             </div>
         </section>
+        <!-- {{ with site.GetPage "section" "art" }}
+            {{range .Pages }}
+                <h1>{{.Title}}</h1>
+            {{ end }}
+        {{ end }} -->
+        <div class="spacer layer2"></div>
+        <section>
+            <h2>Some Tech projects:</h2>
+            {{ with site.GetPage "section" "tech" }}
+            <div class="tech-homepage-previews-list-div">
+                {{ range first 3 (sort .Pages "Params.order") }}
+                    {{ if (isset .Params "externallink") }}
+                        <h3>&#128073;<a href="{{ .Params.externalLink }}" class="project-preview-title">{{ .Title }}</a></h3>
+                    {{ else }}
+                        <h3>&#128073;<a href="{{ .Permalink }}" class="project-preview-title">{{ .Title }}</a></h3>
+                    {{ end }}
+                {{ end }}
+            </div>
+            <a href="{{ .Permalink }}" class="button-28">See All...</a>
+            {{ end }}
+        </section>
+        
+        <div class="spacer layer2"></div>
+        <section>
+            <h2>Check out my art!</h2>
+            {{ with site.GetPage "section" "art" }}
+            {{ $artpagelink := .Permalink }}
+            <a class="art-link" href="{{$artpagelink}}">
+            <div class="project-previews-list-div">
+                {{ range first 3 .Pages }}
+                    <div class="project-preview-div" style="background-image: url({{ .Params.imgLink }});">
+                        <!-- <a href="{{ .Permalink }}" class="project-preview-title">{{ .Title }}</p> -->
+                        <h3>{{ .Title }}</h3>
+                    </div>
+                
+                {{ end }}
+            </div>
+            </a>
+            <a href="{{ .Permalink }}" class="button-28">See All...</a>
+            {{ end }}
+        </section>
     </div>
 
 {{ end }}
