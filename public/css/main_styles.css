@@ -222,12 +222,16 @@ p.project-tagline {
     background-color: #2c20a0;
 }
 
+.index-content .art-link {
+    text-decoration: none;
+}
+
 .index-content .project-preview-div {
     text-decoration: none;
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     aspect-ratio: 0.75;
     background-size: cover;
     background-position: center;
@@ -261,7 +265,7 @@ p.project-tagline {
 }
 
 .tech-homepage-previews-list-div .project-preview-title {
-    text-decoration: none;
+    text-decoration: underline;
 }
 .tech-homepage-previews-list-div .project-preview-title:hover {
     /* color: #dbcfff; */
@@ -400,8 +404,11 @@ p.project-tagline {
         flex-direction: row;
     }
 
-    .index-content .art-link {
+    .tech-homepage-previews-list-div .project-preview-title {
         text-decoration: none;
+    }
+
+    .index-content .art-link {
         width: 100%;
     }
 

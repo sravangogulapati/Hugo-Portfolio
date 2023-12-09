@@ -36,7 +36,11 @@
             {{ with site.GetPage "section" "tech" }}
             <div class="tech-homepage-previews-list-div">
                 {{ range first 3 (sort .Pages "Params.order") }}
-                <a href="{{ .Permalink }}" class="project-preview-title"><h2>{{ .Title }}</h2></a>
+                    {{ if (isset .Params "externallink") }}
+                        <h3>&#128073;<a href="{{ .Params.externalLink }}" class="project-preview-title">{{ .Title }}</a></h3>
+                    {{ else }}
+                        <h3>&#128073;<a href="{{ .Permalink }}" class="project-preview-title">{{ .Title }}</a></h3>
+                    {{ end }}
                 {{ end }}
             </div>
             <a href="{{ .Permalink }}" class="button-28">See All...</a>
