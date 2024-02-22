@@ -3,7 +3,7 @@ title: "Pen-Digitizer"
 date: 2023-06-28T23:43:43-07:00
 draft: false
 order: 4
-imgLink: "https://drive.google.com/uc?export=view&id=1QZosSoPKXmI-vdP4zAEZA0NvbGyPAZw4"
+imgLink: "https://i.imgur.com/Mm2XxqD.jpg"
 tagline: "A pen attachment that digitizes your handwriting live. CS-147 Final Project by Sai Sravan Gogulapati and Barr Avrahamov."
 externalLink: "https://github.com/sravangogulapati/Pen-Digitizer"
 ---
